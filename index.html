@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Momentum App</title>
+        <link rel="stylesheet" href="/style.css" type="text/css" />
+        <script src="https://kit.fontawesome.com/132d8c664b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="login-page">
+            <form id="login-form" class="hidden">
+                <div class="login-page__title">
+                    <h1>Sign in</h1>
+                </div>
+                <input required maxlength="11" minlength="2" type="text" placeholder="user name" onkeyup="this.value=this.value.replace(/[^0-9가-힣a-zA-Z]/g,'');" />
+                <button>로그인</button>
+            </form>
+        </div>
+
+        <div class="main-bg">
+            <div class="main">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h1 id="greeting" class="hidden"></h1>
+                    </div>
+                    <div class="grid-item">
+                        <div id="todo">
+                            <span class="todo-title">To Do list</span>
+                            <form id="todo-form">
+                                <input type="text" placeholder="Write a To Do and Press" required />
+                            </form>
+                            <ul id="todo-list"></ul>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <i class="fa-regular fa-clock fa-xl"></i>
+                        <div id="clock">
+                            <span class="day"></span>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <i class="fa-solid fa-temperature-low fa-xl"></i>
+                        <div id="weather">
+                            <span class="city"></span>
+                            <div>
+                                <span class="weather"></span>
+                                <span class="temp"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div id="quotes">
+                            <span class="quote"></span>
+                            <span class="author"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/login.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/todo.js"></script>
+    </body>
+</html>
